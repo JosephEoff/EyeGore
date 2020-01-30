@@ -85,8 +85,7 @@ def changeCamera(selectedCameraIndex):
     SaveSettings()
 
 def ButtonHandler(ButtonID,  State):
-    print ("ButtonID: " + ButtonID + "  State:" + State)
-    
+  
     if ButtonID == "2" and State == "0":
         ui.checkBoxPause.setChecked(True)
         
@@ -111,7 +110,6 @@ def on_SelectFolderClicked():
         SaveSettings()
 
 def ChangeComport():
-    print("Combobox Comport changed.")
     buttonBox.SetComport(ui.comboBoxComport.currentText())
     SaveSettings()
 

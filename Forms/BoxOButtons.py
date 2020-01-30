@@ -39,7 +39,6 @@ class BoxOButtons(QThread):
         if self.currentSerialPortName == self.nextComport :
             return
         
-        print ("ChangeSerialPort")
         if not self.Comport is None:
             self.ReleaseComport()
 
@@ -49,7 +48,6 @@ class BoxOButtons(QThread):
             self.CreateComport()
             
     def CreateComport(self):
-        print("Create Comport: " + self.currentSerialPortName  )
         self.Comport = serial.Serial( )
         self.Comport.port =  self.currentSerialPortName 
         self.Comport.baudrate = 115200
@@ -69,11 +67,9 @@ class BoxOButtons(QThread):
         
     def ReadComportAndSendEvents(self):
         if self.Comport is None:
-            print("Comport not set.")
             return
             
         if not self.Comport.isOpen():
-            print ("comport not open")
             return
             
         buttonStateBytes = self.Comport.readline()
@@ -82,7 +78,6 @@ class BoxOButtons(QThread):
         
         buttonState = str(buttonStateBytes, encoding='utf-8')
         buttonState = str.strip(buttonState)
-        print("Button State:" + buttonState)
         buttonInfo = buttonState.split(":")
         if len(buttonInfo) == 2:
             self.Signal_ButtonState.emit(buttonInfo[0],  buttonInfo[1])
