@@ -1,4 +1,7 @@
 # EyeGore
+
+The mad scientist's helpful buddy.
+
 WebCam capture using OpenCV, PyQt5, and the [BoxOButtons](https://github.com/JosephEoff/BoxOButtons)
 
 EyeGore is intended to be used with a modified webcam attached to the frame of a pair of eyeglasses.
