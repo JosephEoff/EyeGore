@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>188</width>
-    <height>256</height>
+    <height>346</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,6 +18,10 @@
   </property>
   <property name="windowTitle">
    <string>EyeGore</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../icons.qrc">
+    <normaloff>:/icons/icons/eyegore.png</normaloff>:/icons/icons/eyegore.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -165,6 +169,8 @@
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

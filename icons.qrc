@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/eyegore-32.png</file>
+    <file>icons/eyegore.png</file>
+  </qresource>
+</RCC>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project EyeGore -->
-<!-- Saved: 2020-01-30, 22:48:39 -->
+<!-- Saved: 2020-01-31, 22:53:09 -->
 <!-- Copyright (C) 2020 Joseph Eoff,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -18,12 +18,17 @@
     <Source>Forms/Ui_Main.py</Source>
     <Source>Forms/Ui_WebCamView.py</Source>
     <Source>Forms/WebCamView.py</Source>
+    <Source>Forms/icons_rc.py</Source>
     <Source>__init__.py</Source>
+    <Source>icons_rc.py</Source>
   </Sources>
   <Forms>
     <Form>Forms/Main.ui</Form>
     <Form>Forms/WebCamView.ui</Form>
   </Forms>
+  <Resources>
+    <Resource>icons.qrc</Resource>
+  </Resources>
   <MainScript>EyeGore.py</MainScript>
   <Vcs>
     <VcsType>Git</VcsType>
