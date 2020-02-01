@@ -97,7 +97,7 @@ def ButtonHandler(ButtonID,  State):
 
 def on_buttonSnapshotClicked():
         snapshot = QApplication.primaryScreen().grabWindow(ui.CameraView.winId())
-        filename = datetime.datetime.now().strftime("%Y-%m-%d-%H:%M:%S") + ".png"
+        filename = datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".png"
         filename = os.path.join(ui.plainText_FolderName.toPlainText(),  filename)
         if filename:
             snapshot.save(filename,  "png")
