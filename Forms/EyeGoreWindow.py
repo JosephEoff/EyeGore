@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget
 from PyQt5 import QtCore, QtMultimedia
-from PyQt5.QtWidgets import  QApplication,  QFileDialog
+from PyQt5.QtWidgets import   QFileDialog
 from PyQt5.QtCore import QSettings
 from Forms.Ui_Main import Ui_MainWindow
 from Forms.BoxOButtons import BoxOButtons
@@ -98,8 +98,7 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
         self.start()
         self.SaveSettings()
 
-    def ButtonHandler(self, ButtonID,  State):
-      
+    def ButtonHandler(self, ButtonID,  State):      
         if ButtonID == "2" and State == "0":
             self.checkBoxPause.setChecked(True)
             
@@ -110,7 +109,10 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
             self.on_buttonSnapshotClicked()
 
     def on_buttonSnapshotClicked(self):
-            snapshot = QApplication.primaryScreen().grabWindow(self.CameraView.winId())
+            snapshot = self.CameraView.getPixmap()
+            if snapshot is None:
+                return
+            #QApplication.primaryScreen().grabWindow(self.CameraView.winId())
             filename = datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".png"
             filename = os.path.join(self.plainText_FolderName.toPlainText(),  filename)
             if filename:

@@ -16,4 +16,4 @@ class WebCamView(QWidget, Ui_WebCamView):
         self.viewer.setPixmap(pix)
 
     def getPixmap(self):
-        return self.viewer.pixmap
+        return self.viewer.pixmap()
