@@ -112,14 +112,16 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
             snapshot = self.CameraView.getPixmap()
             if snapshot is None:
                 return
-            #QApplication.primaryScreen().grabWindow(self.CameraView.winId())
             filename = datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".png"
             filename = os.path.join(self.plainText_FolderName.toPlainText(),  filename)
             if filename:
                 snapshot.save(filename,  "png")
 
     def on_SelectFolderClicked(self):
-        directory = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
+        directory = self.plainText_FolderName.toPlainText()
+        if not directory:
+            directory = os.path.expanduser("~")
+        directory = str(QFileDialog.getExistingDirectory(None, "Select Directory",  directory))
         if directory:
             self.plainText_FolderName.clear()
             self.plainText_FolderName.insertPlainText(directory)
@@ -137,7 +139,7 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
     def LoadSettings(self):
         self.setComboBoxSelectedItemFromSettings("ComPort",self.comboBoxComport)
         self.setComboBoxSelectedItemFromSettings("Camera",self.comboBoxCameraSelect)
-        directory = self.settings.value("ImageFolder", "")
+        directory = self.settings.value("ImageFolder", os.path.expanduser("~"))
         self.plainText_FolderName.clear()
         self.plainText_FolderName.insertPlainText(directory)
         
