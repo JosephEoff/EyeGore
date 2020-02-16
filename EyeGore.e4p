@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project EyeGore -->
-<!-- Saved: 2020-02-01, 01:09:44 -->
+<!-- Saved: 2020-02-16, 15:01:53 -->
 <!-- Copyright (C) 2020 Joseph Eoff,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -15,6 +15,7 @@
   <Sources>
     <Source>EyeGore.py</Source>
     <Source>Forms/BoxOButtons.py</Source>
+    <Source>Forms/EyeGoreWindow.py</Source>
     <Source>Forms/Ui_Main.py</Source>
     <Source>Forms/Ui_WebCamView.py</Source>
     <Source>Forms/WebCamView.py</Source>

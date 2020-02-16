@@ -15,4 +15,5 @@ class WebCamView(QWidget, Ui_WebCamView):
         pix = QtGui.QPixmap.fromImage(img)
         self.viewer.setPixmap(pix)
 
-     
+    def getPixmap(self):
+        return self.viewer.pixmap

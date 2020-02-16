@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QCoreApplication
-from Forms.Ui_Main import Ui_MainWindow
+from Forms.EyeGoreWindow import EyeGoreWindow
 
 if __name__ == "__main__":
     QCoreApplication.setOrganizationName("JRE")
@@ -8,8 +8,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    
+    ui = EyeGoreWindow(MainWindow)
+        
     MainWindow.show()
     sys.exit(app.exec_())
