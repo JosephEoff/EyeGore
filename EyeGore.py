@@ -5,6 +5,7 @@ from Forms.EyeGoreWindow import EyeGoreWindow
 if __name__ == "__main__":
     QCoreApplication.setOrganizationName("JRE")
     QCoreApplication.setApplicationName("EyeGore")
+    QCoreApplication.setApplicationVersion('1.0.0')
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

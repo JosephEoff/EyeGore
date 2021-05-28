@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/dev/EricProjects/EyeGore/Forms/WebCamView.ui'
+# Form implementation generated from reading ui file '/home/dev/GitHub/EyeGore/Forms/WebCamView.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_WebCamView(object):
     def setupUi(self, WebCamView):
@@ -53,4 +55,3 @@ if __name__ == "__main__":
     ui.setupUi(WebCamView)
     WebCamView.show()
     sys.exit(app.exec_())
-

@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/dev/EricProjects/EyeGore/Forms/Main.ui'
+# Form implementation generated from reading ui file '/home/dev/GitHub/EyeGore/Forms/Main.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.13.1
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -118,9 +120,9 @@ class Ui_MainWindow(object):
         self.pushButtonSave.setText(_translate("MainWindow", "Save"))
         self.checkBoxPause.setText(_translate("MainWindow", "Pause"))
         self.pushButtonSelectFolder.setText(_translate("MainWindow", "Select Folder"))
-
 from Forms.WebCamView import WebCamView
 import icons_rc
+
 
 if __name__ == "__main__":
     import sys
@@ -130,4 +132,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-
