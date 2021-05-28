@@ -9,16 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100.07359mm"
-   height="99.923553mm"
-   viewBox="0 0 100.07359 99.923553"
+   width="100.00006mm"
+   height="99.999954mm"
+   viewBox="0 0 100.00006 99.999954"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="eyegore.svg"
-   inkscape:export-filename="/home/dev/Pictures/EyeGore/eyegore.png"
-   inkscape:export-xdpi="16.268436"
-   inkscape:export-ydpi="16.268436">
+   inkscape:export-filename="/home/dev/GitHub/EyeGore/icons/mac/eyegore.png"
+   inkscape:export-xdpi="260.10001"
+   inkscape:export-ydpi="260.10001">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -29,8 +29,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.125"
-     inkscape:cx="47.057125"
-     inkscape:cy="-215.38247"
+     inkscape:cx="47.052517"
+     inkscape:cy="-215.37781"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -59,9 +59,10 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-67.080473,-63.887697)">
+     transform="translate(-67.081692,-63.812532)">
     <g
-       id="g842">
+       id="g842"
+       transform="matrix(0.99926534,0,0,1.0007646,0.05050075,-0.12401311)">
       <ellipse
          ry="48.334755"
          rx="48.409771"

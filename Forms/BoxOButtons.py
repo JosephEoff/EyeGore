@@ -5,6 +5,7 @@ import serial.tools.list_ports
 
 class BoxOButtons(QThread):
     Signal_ButtonState = pyqtSignal(str,  str)
+    Signal_ComportError = pyqtSignal(str)
     
     def __init__(self):
         super(BoxOButtons, self).__init__()
@@ -58,7 +59,11 @@ class BoxOButtons(QThread):
         self.Comport.stopbits = serial.STOPBITS_ONE
         self.Comport.databits = serial.EIGHTBITS
         self.Comport.timeout = 0.5
-        self.Comport.open()  
+        try:
+            self.Comport.open() 
+        except Exception as ex:
+            self.Signal_ComportError.emit(str(ex))
+            
         
     def ReleaseComport(self):
         if not self.Comport is None:

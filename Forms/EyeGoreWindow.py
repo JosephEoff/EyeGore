@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QWidget
 from PyQt5 import QtCore, QtMultimedia
-from PyQt5.QtWidgets import   QFileDialog
+from PyQt5.QtWidgets import   QFileDialog,  QMessageBox
 from PyQt5.QtCore import QSettings
 from Forms.Ui_Main import Ui_MainWindow
 from Forms.BoxOButtons import BoxOButtons
@@ -35,6 +35,7 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
 
         self.buttonBox.SetComport(self.comboBoxComport.currentText())
         self.buttonBox.Signal_ButtonState.connect(self.ButtonHandler)
+        self.buttonBox.Signal_ComportError.connect(self.ComportErrorHandler)
         self.buttonBox.start()
 
     def start(self):
@@ -97,6 +98,15 @@ class EyeGoreWindow(QWidget, Ui_MainWindow):
         self.stop()
         self.start()
         self.SaveSettings()
+
+    def ComportErrorHandler(self,  errorString):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setText("An error occurred while opening the serial port.  Make sure you have permission to open the serial port.")
+        msg.setInformativeText(errorString)
+        msg.setWindowTitle("Serial port error")
+        msg.exec_()
+
 
     def ButtonHandler(self, ButtonID,  State):      
         if ButtonID == "2" and State == "0":
